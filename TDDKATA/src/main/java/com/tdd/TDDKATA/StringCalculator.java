@@ -9,14 +9,14 @@ public class StringCalculator {
 			return 0;
 		}
 		
-		if (numbers.contains("\n")) {
+		/*if (numbers.contains("\n")) {
 			String numberWONewLIne= numbers.replace("\n", "");
 			System.out.println(numbers);
 			arr = numberWONewLIne.split(",");
 		}
-		else {
+		else {*/
 		 arr = numbers.split(",");
-		}
+		//}
 
 		
 		if (arr.length == 1) {
@@ -26,6 +26,12 @@ public class StringCalculator {
 		else {
 
 			for (int i = 0; i < arr.length; i++) {
+				if(arr[i].contains("\n")) {
+					arr[i] = arr[i].replace("\n", "");
+					if(arr[i].isEmpty() || arr[i].isBlank()) {
+						arr[i] = "0";
+					}
+				}
 				result = result + Integer.parseInt(arr[i]);
 			}
 			return result;
