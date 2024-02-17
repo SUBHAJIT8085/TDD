@@ -1,10 +1,19 @@
 package com.tdd.TDDKATA;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class StringCalculator {
 
 	int add(String numbers) {
 		int result = 0;
 		String[] arr;
+		
+		Pattern pattern = Pattern.compile("-\\d");
+		Matcher match = pattern.matcher(numbers);
+		if(match.find()) {
+			throw new RuntimeException("ENter a string that contains negative integer");
+		}
 		if (numbers.isEmpty() || numbers.isBlank()) {
 			return 0;
 		}
@@ -36,6 +45,9 @@ public class StringCalculator {
 
 					}
 					
+				}
+				else if(numbers.contains("\\;")) {
+					arr[i] = arr[i].replace("\n", "");
 				}
 				result = result + Integer.parseInt(arr[i]);
 			}

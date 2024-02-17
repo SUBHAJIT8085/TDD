@@ -73,4 +73,32 @@ public class AppTest
         Assert.assertEquals(expected, sum);
        
     }
+    
+  
+    @Test
+    public void findTheSumWithDelimiter()
+    {
+    	String numbers = "1,2,\\1,3,4,5,8,9";
+    	
+    	
+    	
+        int  sum = stringCal.add(numbers);
+        int expected = 32;
+        Assert.assertEquals(expected, sum);
+       
+    }
+    
+    @Test(expected = RuntimeException.class)
+    public void findNegative()
+    {
+    	String numbers = "1,2,-1,3,4,5,8,9";
+    	
+    	
+    	
+        int  sum = stringCal.add(numbers);
+        int expected = 32;
+        Assert.assertEquals(expected, sum);
+       
+    }
+
 }
