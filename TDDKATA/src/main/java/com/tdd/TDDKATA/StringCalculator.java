@@ -29,8 +29,13 @@ public class StringCalculator {
 				if(arr[i].contains("\n")) {
 					arr[i] = arr[i].replace("\n", "");
 					if(arr[i].isEmpty() || arr[i].isBlank()) {
+
 						throw new RuntimeException("Invalid Input");
+
+						
+
 					}
+					
 				}
 				result = result + Integer.parseInt(arr[i]);
 			}
