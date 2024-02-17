@@ -1,7 +1,6 @@
 package com.tdd.TDDKATA;
 
-import static org.junit.Assert.assertTrue;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -15,6 +14,11 @@ public class AppTest
     @Test
     public void shouldAnswerWithTrue()
     {
-        assertTrue( true );
+    	String numbers = "";
+        StringCalculator stringCal = new StringCalculator();
+        int  sum = stringCal.add(numbers);
+        int expected = 0;
+        Assert.assertEquals(expected, sum);
+       
     }
 }
