@@ -1,4 +1,4 @@
-package com.tdd.ttdkata;
+package com.tdd.TDDKATA;
 
 import static org.junit.Assert.assertTrue;
 
