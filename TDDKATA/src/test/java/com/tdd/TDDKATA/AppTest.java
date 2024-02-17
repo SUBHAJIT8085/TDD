@@ -41,4 +41,25 @@ public class AppTest
         Assert.assertEquals(expected, sum);
        
     }
+    
+    @Test
+    public void findTheSumOfManyNumber()
+    {
+    	String numbers = "1,2,3,4,5,8,9";
+        int  sum = stringCal.add(numbers);
+        int expected = 32;
+        Assert.assertEquals(expected, sum);
+       
+    }
+    
+    @Test
+    public void findTheSumOfManyNumberHAvingNewLine()
+    {
+    	String numbers = "1,2\n,3,4,5,8,9";
+    	
+        int  sum = stringCal.add(numbers);
+        int expected = 32;
+        Assert.assertEquals(expected, sum);
+       
+    }
 }
