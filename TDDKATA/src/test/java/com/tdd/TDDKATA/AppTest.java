@@ -11,11 +11,12 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
+	
+	StringCalculator stringCal = new StringCalculator();
     @Test
     public void findTheSumOfEmptyString()
     {
     	String numbers = "";
-        StringCalculator stringCal = new StringCalculator();
         int  sum = stringCal.add(numbers);
         int expected = 0;
         Assert.assertEquals(expected, sum);
@@ -25,9 +26,18 @@ public class AppTest
     public void findTheSumOf1Number()
     {
     	String numbers = "1";
-        StringCalculator stringCal = new StringCalculator();
         int  sum = stringCal.add(numbers);
         int expected = 1;
+        Assert.assertEquals(expected, sum);
+       
+    }
+    
+    @Test
+    public void findTheSumOf2Number()
+    {
+    	String numbers = "1,2";
+        int  sum = stringCal.add(numbers);
+        int expected = 3;
         Assert.assertEquals(expected, sum);
        
     }
